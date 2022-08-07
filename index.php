@@ -72,7 +72,7 @@ body {
 }
 
 .tick-flip {
-   border-radius:0.12em !important; 
+   border-radius:0.12em !important;  
 }
 </style>
 
