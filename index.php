@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="6">
+    <!--<meta http-equiv="refresh" content="6">-->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width">
@@ -16,10 +16,10 @@
 
 <style>
 .tick {
-  font-size:2.0rem; 
+  font-size:1rem; 
   white-space:nowrap; 
-  font-family:arial,sans-serif;
-  text-align:horizontal,vertical-text;
+  font-family:"Highway Gothic Regular",sans-serif;
+  line-height:2.0;
   
 }
 
@@ -31,7 +31,7 @@
 }
 
 .tick-char {
-  width:.5em;
+  width:1em;
   font-size:2em; 
   text-align:center;
 }
@@ -40,7 +40,7 @@
   display:inline-block;text-align:center;min-width:1em;
   color: #595d63 !important; 
   
-  font-size:1em;
+  font-size:.9em;
 }
 
 .tick-group {
@@ -54,8 +54,8 @@ body {
 .tick-flip-panel {
    color: #fff !important; 
    background-color: #3c3e3c !important; 
-  font-size:1.5em;
-    margin:0 0;
+  font-size:2em;
+   
 }
 
   
@@ -65,6 +65,7 @@ body {
   margin-right: .0625em;
   border-radius:0.12em !important;  
   font-size:3em;
+  text-indent:-.050em
 }
 
 .tick-flip-panel-text-wrapper {
@@ -72,26 +73,28 @@ body {
   text-align:center;
    
 }
+.spacingStuff {
+  padding:150px;
+  
+}
 
 
 
 }
 </style>
-
+<div class="spacingStuff">
   <div class="tick" data-did-init="handleTickInit" data-layout="horizontal fit">
-
     <div data-repeat="true" data-layout="horizontal" class="tick-flip-panel" data-transform="upper -> split -> delay(random, 100, 150)" >
         <span data-overlay="center" data-view="flip" data-transform="ascii -> arrive -> char(a-zA-Z0-9)"></span>
     </div>
   </div>
 
-    <div class="tick" data-did-init="handleTickInit2">
-
+  <div class="tick" data-did-init="handleTickInit2">
     <div data-repeat="true" data-layout="horizontal fit" data-transform="upper -> split -> delay(random, 100, 150)">
         <span data-view="flip" data-style="flip-easing: ease-in-circ" data-transform="ascii -> arrive -> round -> char(a-zA-Z0-9)" class="tick-char"></span>
     </div>
   </div>
-
+</div>
 
   
 <script>
